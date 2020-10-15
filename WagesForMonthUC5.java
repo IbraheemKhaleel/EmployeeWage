@@ -1,13 +1,11 @@
 package EmployeeWage;
-
 import java.util.Random;
-
 public class WagesForMonthUC5 
 {
 	public static final int isPresent = 1;
 	public static final int isPartTime = 2;
 	public static final int EMPRATEPERHOUR = 20;
-	public static final int NUMOFWORKINGDAYS = 5; 
+	public static final int NUMOFWORKINGDAYS = 20; 
 	public static void main(String[] args)
 	{
 		int empHours = 0 , dailyWage =0 , totalEmployeeWage =0 ;
