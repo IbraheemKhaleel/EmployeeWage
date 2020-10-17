@@ -12,34 +12,33 @@ public class EmployeeWage
 	public static final int MAXWORKINGDAYS = 20 ;
 	public void wageFunction()
 	{
-		int empHrs;
+	    int empHrs;
 	    int empCheck;
 	    int totalWorkingDay=0;
 	    int dailyWage=0;
 	    int totalWage=0, totalWorkingHours = 0 ;
-		while(totalWorkingDay < MAXWORKINGDAYS && totalWorkingHours < MAXWORKINGHOURS)
+	    while(totalWorkingDay < MAXWORKINGDAYS && totalWorkingHours < MAXWORKINGHOURS)
+	    {
+		empCheck=rand.nextInt(3);
+            	if(empCheck == 1)
+            	{
+            		empHrs=8;
+            	}
+            	else if ( empCheck == 2 )
+            	{
+			empHrs=4;
+            	}
+		else
 		{
-			empCheck=rand.nextInt(3);
-            if(empCheck == 1)
-            {
-            	empHrs=8;
-            }
-            else if ( empCheck == 2 )
-            {
-				empHrs=4;
-            }
-			else
-			{
-				empHrs=0;
-			}
-			dailyWage=WAGEPERHOUR*empHrs;
-			totalWorkingDay++;
-			totalWage=totalWage+dailyWage;
-		
+			empHrs=0;
 		}
-		System.out.println(" Monthly wage is  "  + totalWage );
-		System.out.println(" Total working day is " + totalWorkingDay);
-     }
+		dailyWage=WAGEPERHOUR*empHrs;
+		totalWorkingDay++;
+		totalWage=totalWage+dailyWage;
+	    }
+	    System.out.println(" Monthly wage is  "  + totalWage );
+	    System.out.println(" Total working day is " + totalWorkingDay);
+         }
 	 public static void main(String[] args)
 	 {
 		EmployeeWage employeeWage = new EmployeeWage();
